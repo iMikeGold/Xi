@@ -1,6 +1,21 @@
-/* --------------------------
+/* ==================================================
+   🎨 BRAND COLOUR PALETTE — EDIT THESE VALUES ONLY!
+   ================================================== */
+:root {
+    --brand-primary: #165DFF;        /* Bold main brand blue — change to your main colour */
+    --brand-secondary: #FF7D00;     /* Bright accent orange — for buttons/highlights */
+    --brand-tertiary: #7B2CF4;       /* Purple accent — for quotes/special elements */
+    --brand-dark: #111827;           /* Deep dark — text, headers, footer */
+    --brand-light: #FFFFFF;          /* White — main background */
+    --brand-grey-light: #F3F4F6;     /* Light grey — subtle backgrounds */
+    --brand-grey-medium: #9CA3AF;    /* Medium grey — secondary text */
+    --brand-success: #00B42A;        /* Green — success states */
+    --brand-error: #F53F3F;          /* Red — error states */
+}
+
+/* ==================================================
    GLOBAL RESET & BASE STYLES
---------------------------- */
+   ================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +24,8 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    color: #222;
-    background-color: #fdfdfd;
+    color: var(--brand-dark);
+    background-color: var(--brand-light); /* ✅ Basic white background */
     line-height: 1.7;
     font-size: 16px;
 }
@@ -33,20 +48,20 @@ a {
 
 strong {
     font-weight: 600;
-    color: #111;
+    color: var(--brand-dark);
 }
 
-/* --------------------------
+/* ==================================================
    HEADER & NAVIGATION
---------------------------- */
+   ================================================== */
 .site-header {
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    background: var(--brand-light);
+    border-bottom: 3px solid var(--brand-primary); /* ✅ Bold brand colour border */
     padding: 1.2rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .site-header .container {
@@ -59,12 +74,12 @@ strong {
 .logo h1 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #222;
+    color: var(--brand-primary); /* ✅ Brand colour for logo */
 }
 
 .logo .symbol {
     font-weight: 400;
-    color: #666;
+    color: var(--brand-grey-medium);
 }
 
 .main-nav ul {
@@ -75,45 +90,47 @@ strong {
 
 .main-nav a {
     font-size: 0.95rem;
-    font-weight: 500;
-    color: #555;
+    font-weight: 600;
+    color: var(--brand-dark);
     padding: 0.3rem 0;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: #000;
-    border-bottom: 2px solid #222;
+    color: var(--brand-primary); /* ✅ Brand colour on hover/active */
+    border-bottom: 3px solid var(--brand-primary);
 }
 
-/* --------------------------
+/* ==================================================
    HERO SECTION
---------------------------- */
+   ================================================== */
 .hero {
-    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+    background: var(--brand-light);
     padding: 5rem 0 4rem;
     text-align: center;
+    border-bottom: 1px solid var(--brand-grey-light);
 }
 
 .hero h2 {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
-    color: #111;
+    color: var(--brand-primary); /* ✅ Bold brand colour heading */
 }
 
 .hero .tagline {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--brand-secondary); /* ✅ Bright accent colour tagline */
     font-style: italic;
     margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .hero p {
     max-width: 750px;
     margin: 0.8rem auto;
     font-size: 1.05rem;
-    color: #444;
+    color: var(--brand-dark);
 }
 
 .hero-buttons {
@@ -124,9 +141,9 @@ strong {
     flex-wrap: wrap;
 }
 
-/* --------------------------
+/* ==================================================
    BUTTONS
---------------------------- */
+   ================================================== */
 .btn {
     padding: 0.8rem 2rem;
     border-radius: 4px;
@@ -138,30 +155,31 @@ strong {
 }
 
 .btn-primary {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--brand-primary); /* ✅ Bold primary button */
+    color: var(--brand-light);
 }
 
 .btn-primary:hover {
-    background-color: #000;
+    background-color: #0F48C9; /* Darker shade of primary — auto-matched */
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: #222;
-    border: 2px solid #222;
+    background-color: var(--brand-secondary); /* ✅ Bright accent button */
+    color: var(--brand-light);
 }
 
 .btn-secondary:hover {
-    background-color: #222;
-    color: #fff;
+    background-color: #E67000; /* Darker shade of secondary — auto-matched */
+    transform: translateY(-1px);
 }
 
-/* --------------------------
+/* ==================================================
    MAIN CONTENT BLOCKS
---------------------------- */
+   ================================================== */
 .content {
     padding: 3rem 0;
+    background-color: var(--brand-light); /* ✅ Pure white background */
 }
 
 .content-block {
@@ -170,31 +188,31 @@ strong {
 
 .content-block h3 {
     font-size: 1.6rem;
-    color: #111;
+    color: var(--brand-primary); /* ✅ Brand colour headings */
     margin-bottom: 1rem;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid var(--brand-grey-light);
     padding-bottom: 0.3rem;
 }
 
 .content-block p {
     margin-bottom: 1rem;
-    color: #444;
+    color: var(--brand-dark);
 }
 
 .content-block .promise {
     font-size: 1.3rem;
-    font-weight: 600;
-    color: #222;
+    font-weight: 700;
+    color: var(--brand-tertiary); /* ✅ Tertiary colour for key promise */
     text-align: center;
     padding: 1rem;
-    background: #f9f9f9;
+    background: var(--brand-grey-light);
     border-radius: 6px;
 }
 
 .themes-list li {
     padding: 0.7rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #444;
+    border-bottom: 1px solid var(--brand-grey-light);
+    color: var(--brand-dark);
 }
 
 .themes-list li:last-child {
@@ -202,27 +220,28 @@ strong {
 }
 
 .highlight {
-    background-color: #f8f8f8;
+    background-color: var(--brand-grey-light);
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
-    border-left: 4px solid #222;
+    border-left: 5px solid var(--brand-tertiary); /* ✅ Bold tertiary border */
 }
 
 blockquote {
     font-size: 1.4rem;
     font-style: italic;
-    color: #333;
+    color: var(--brand-tertiary); /* ✅ Tertiary colour for quotes */
     max-width: 700px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
-/* --------------------------
+/* ==================================================
    FOOTER
---------------------------- */
+   ================================================== */
 .site-footer {
-    background-color: #222;
-    color: #ccc;
+    background-color: var(--brand-primary); /* ✅ Brand colour footer background */
+    color: var(--brand-light); /* ✅ White text on brand colour */
     padding: 2rem 0;
     text-align: center;
     font-size: 0.9rem;
@@ -232,9 +251,9 @@ blockquote {
     margin-bottom: 0.3rem;
 }
 
-/* --------------------------
+/* ==================================================
    RESPONSIVE ADJUSTMENTS
---------------------------- */
+   ================================================== */
 @media (max-width: 768px) {
     .site-header .container {
         flex-direction: column;
