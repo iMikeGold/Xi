@@ -52,7 +52,7 @@ strong {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION — ✅ TABS BACK ON THE RIGHT
    ================================================== */
 .site-header {
     background: var(--mi-white);
@@ -66,7 +66,7 @@ strong {
 
 .site-header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* ✅ Logo left, nav RIGHT */
     align-items: center;
     flex-wrap: wrap;
 }
@@ -89,6 +89,7 @@ strong {
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 0.3rem;
+    justify-content: flex-end; /* ✅ Keep tabs aligned right even if wrapped */
 }
 
 /* ✅ NAV ITEM STYLING */
@@ -147,9 +148,7 @@ strong {
 }
 
 /* ==================================================
-   BUTTONS — ✅ CORRECT NOW:
-   - Blue button = stays blue → hover = GOLD
-   - Red button = stays red → hover = PURPLE
+   BUTTONS — ✅ CORRECT: Blue → Gold hover | Red → Purple hover
    ================================================== */
 .btn {
     padding: 0.8rem 2rem;
@@ -264,22 +263,22 @@ blockquote {
 }
 
 /* ==================================================
-   RESPONSIVE — ✅ MOBILE NAV IN-LINE (NOT STACKED)
+   RESPONSIVE — ✅ MOBILE NAV IN-LINE + STILL RIGHT ALIGNED
    ================================================== */
 @media (max-width: 768px) {
     .site-header .container {
         flex-direction: column;
         gap: 0.8rem;
-        align-items: flex-start;
+        align-items: stretch; /* ✅ Full width, keep nav right */
     }
 
     .main-nav {
         width: 100%;
     }
 
-    /* ✅ Keep nav items in a single horizontal line, scroll if needed */
+    /* ✅ Keep nav items horizontal, scrollable, aligned to right */
     .main-nav ul {
-        justify-content: flex-start;
+        justify-content: flex-end;
         gap: 1.2rem;
     }
 
