@@ -4,10 +4,10 @@
    ================================================== */
 :root {
     --mi-white:        #FFFEFC;       /* Warm soft white — dominant background */
-    --mi-blue:         #23399E;       /* Warmer, softer deep blue — main brand */
-    --mi-red:          #B72222;       /* Richer, warmer red — balance point */
-    --mi-gold:         #E2B850;       /* Warm soft gold — now PRIMARY button colour */
-    --mi-purple:       #5B2099;       /* Rich warm purple — now SECONDARY button colour */
+    --mi-blue:         #23399E;       /* Warmer, softer deep blue — MAIN BUTTON COLOR */
+    --mi-red:          #B72222;       /* Richer, warmer red — SECONDARY BUTTON COLOR */
+    --mi-gold:         #E2B850;       /* Warm soft gold — HOVER COLOR FOR BLUE BUTTON */
+    --mi-purple:       #5B2099;       /* Rich warm purple — HOVER COLOR FOR RED BUTTON */
     --mi-dark:         #1E1E24;       /* Soft dark text — warmer tone */
     --mi-grey-light:   #F7F3EF;       /* Warm light grey — subtle backgrounds */
     --mi-grey-medium:  #7A7672;       /* Soft medium grey — secondary text */
@@ -147,7 +147,9 @@ strong {
 }
 
 /* ==================================================
-   BUTTONS — ✅ SWAPPED: Blue → Gold, Red → Purple
+   BUTTONS — ✅ CORRECT NOW:
+   - Blue button = stays blue → hover = GOLD
+   - Red button = stays red → hover = PURPLE
    ================================================== */
 .btn {
     padding: 0.8rem 2rem;
@@ -159,25 +161,26 @@ strong {
     border: none;
 }
 
-/* ✅ WAS BLUE → NOW GOLD */
+/* ✅ "Explore How We Work" — BLUE base → GOLD on hover */
 .btn-primary {
-    background-color: var(--mi-gold);
-    color: var(--mi-dark);
+    background-color: var(--mi-blue);
+    color: var(--mi-white);
 }
 
 .btn-primary:hover {
-    background-color: #D4A438; /* Darker warm gold */
+    background-color: var(--mi-gold);
+    color: var(--mi-dark);
     transform: translateY(-1px);
 }
 
-/* ✅ WAS RED → NOW PURPLE */
+/* ✅ "Start Your Strength Test" — RED base → PURPLE on hover */
 .btn-secondary {
-    background-color: var(--mi-purple);
+    background-color: var(--mi-red);
     color: var(--mi-white);
 }
 
 .btn-secondary:hover {
-    background-color: #4A148C; /* Darker warm purple */
+    background-color: var(--mi-purple);
     transform: translateY(-1px);
 }
 
