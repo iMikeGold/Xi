@@ -1,20 +1,18 @@
 /* ==================================================
-   🎨 BRAND COLOUR PALETTE — EDIT THESE VALUES ONLY!
+   🎨 BRAND COLOUR PALETTE — EDIT THESE ONLY!
    ================================================== */
 :root {
-    --brand-primary: #165DFF;        /* Bold main brand blue — change to your main colour */
-    --brand-secondary: #FF7D00;     /* Bright accent orange — for buttons/highlights */
-    --brand-tertiary: #7B2CF4;       /* Purple accent — for quotes/special elements */
-    --brand-dark: #111827;           /* Deep dark — text, headers, footer */
-    --brand-light: #FFFFFF;          /* White — main background */
-    --brand-grey-light: #F3F4F6;     /* Light grey — subtle backgrounds */
-    --brand-grey-medium: #9CA3AF;    /* Medium grey — secondary text */
-    --brand-success: #00B42A;        /* Green — success states */
-    --brand-error: #F53F3F;          /* Red — error states */
+    --brand-primary: #165DFF;        /* Main brand blue */
+    --brand-secondary: #FF7D00;     /* Bright orange accent */
+    --brand-tertiary: #7B2CF4;       /* Purple accent */
+    --brand-dark: #111827;           /* Dark text / headings */
+    --brand-light: #FFFFFF;          /* White background */
+    --brand-grey-light: #F3F4F6;     /* Light grey backgrounds */
+    --brand-grey-medium: #9CA3AF;    /* Secondary text */
 }
 
 /* ==================================================
-   GLOBAL RESET & BASE STYLES
+   BASE STYLES
    ================================================== */
 * {
     margin: 0;
@@ -25,7 +23,7 @@
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     color: var(--brand-dark);
-    background-color: var(--brand-light); /* ✅ Basic white background */
+    background-color: var(--brand-light);
     line-height: 1.7;
     font-size: 16px;
 }
@@ -52,11 +50,11 @@ strong {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION
+   HEADER & NAV
    ================================================== */
 .site-header {
     background: var(--brand-light);
-    border-bottom: 3px solid var(--brand-primary); /* ✅ Bold brand colour border */
+    border-bottom: 3px solid var(--brand-primary);
     padding: 1.2rem 0;
     position: sticky;
     top: 0;
@@ -74,7 +72,7 @@ strong {
 .logo h1 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--brand-primary); /* ✅ Brand colour for logo */
+    color: var(--brand-primary);
 }
 
 .logo .symbol {
@@ -98,12 +96,12 @@ strong {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: var(--brand-primary); /* ✅ Brand colour on hover/active */
+    color: var(--brand-primary);
     border-bottom: 3px solid var(--brand-primary);
 }
 
 /* ==================================================
-   HERO SECTION
+   HERO
    ================================================== */
 .hero {
     background: var(--brand-light);
@@ -115,12 +113,12 @@ strong {
 .hero h2 {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
-    color: var(--brand-primary); /* ✅ Bold brand colour heading */
+    color: var(--brand-primary);
 }
 
 .hero .tagline {
     font-size: 1.2rem;
-    color: var(--brand-secondary); /* ✅ Bright accent colour tagline */
+    color: var(--brand-secondary);
     font-style: italic;
     margin-bottom: 1.5rem;
     font-weight: 500;
@@ -155,31 +153,31 @@ strong {
 }
 
 .btn-primary {
-    background-color: var(--brand-primary); /* ✅ Bold primary button */
+    background-color: var(--brand-primary);
     color: var(--brand-light);
 }
 
 .btn-primary:hover {
-    background-color: #0F48C9; /* Darker shade of primary — auto-matched */
+    background-color: #0F48C9;
     transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background-color: var(--brand-secondary); /* ✅ Bright accent button */
+    background-color: var(--brand-secondary);
     color: var(--brand-light);
 }
 
 .btn-secondary:hover {
-    background-color: #E67000; /* Darker shade of secondary — auto-matched */
+    background-color: #E67000;
     transform: translateY(-1px);
 }
 
 /* ==================================================
-   MAIN CONTENT BLOCKS
+   CONTENT BLOCKS
    ================================================== */
 .content {
     padding: 3rem 0;
-    background-color: var(--brand-light); /* ✅ Pure white background */
+    background-color: var(--brand-light);
 }
 
 .content-block {
@@ -188,7 +186,7 @@ strong {
 
 .content-block h3 {
     font-size: 1.6rem;
-    color: var(--brand-primary); /* ✅ Brand colour headings */
+    color: var(--brand-primary);
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--brand-grey-light);
     padding-bottom: 0.3rem;
@@ -202,7 +200,7 @@ strong {
 .content-block .promise {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--brand-tertiary); /* ✅ Tertiary colour for key promise */
+    color: var(--brand-tertiary);
     text-align: center;
     padding: 1rem;
     background: var(--brand-grey-light);
@@ -224,13 +222,13 @@ strong {
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
-    border-left: 5px solid var(--brand-tertiary); /* ✅ Bold tertiary border */
+    border-left: 5px solid var(--brand-tertiary);
 }
 
 blockquote {
     font-size: 1.4rem;
     font-style: italic;
-    color: var(--brand-tertiary); /* ✅ Tertiary colour for quotes */
+    color: var(--brand-tertiary);
     max-width: 700px;
     margin: 0 auto;
     font-weight: 500;
@@ -240,8 +238,8 @@ blockquote {
    FOOTER
    ================================================== */
 .site-footer {
-    background-color: var(--brand-primary); /* ✅ Brand colour footer background */
-    color: var(--brand-light); /* ✅ White text on brand colour */
+    background-color: var(--brand-primary);
+    color: var(--brand-light);
     padding: 2rem 0;
     text-align: center;
     font-size: 0.9rem;
@@ -252,18 +250,16 @@ blockquote {
 }
 
 /* ==================================================
-   RESPONSIVE ADJUSTMENTS
+   RESPONSIVE
    ================================================== */
 @media (max-width: 768px) {
     .site-header .container {
         flex-direction: column;
         gap: 1rem;
     }
-
     .hero h2 {
         font-size: 1.8rem;
     }
-
     blockquote {
         font-size: 1.1rem;
     }
