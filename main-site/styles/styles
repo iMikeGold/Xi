@@ -1,0 +1,251 @@
+/* --------------------------
+   GLOBAL RESET & BASE STYLES
+--------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #222;
+    background-color: #fdfdfd;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+strong {
+    font-weight: 600;
+    color: #111;
+}
+
+/* --------------------------
+   HEADER & NAVIGATION
+--------------------------- */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.logo .symbol {
+    font-weight: 400;
+    color: #666;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #000;
+    border-bottom: 2px solid #222;
+}
+
+/* --------------------------
+   HERO SECTION
+--------------------------- */
+.hero {
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+    padding: 5rem 0 4rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+    color: #111;
+}
+
+.hero .tagline {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0.8rem auto;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --------------------------
+   BUTTONS
+--------------------------- */
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #222;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #222;
+    border: 2px solid #222;
+}
+
+.btn-secondary:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* --------------------------
+   MAIN CONTENT BLOCKS
+--------------------------- */
+.content {
+    padding: 3rem 0;
+}
+
+.content-block {
+    margin-bottom: 3rem;
+}
+
+.content-block h3 {
+    font-size: 1.6rem;
+    color: #111;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.3rem;
+}
+
+.content-block p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.content-block .promise {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.themes-list li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+}
+
+.themes-list li:last-child {
+    border-bottom: none;
+}
+
+.highlight {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #222;
+}
+
+blockquote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --------------------------
+   FOOTER
+--------------------------- */
+.site-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.3rem;
+}
+
+/* --------------------------
+   RESPONSIVE ADJUSTMENTS
+--------------------------- */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    blockquote {
+        font-size: 1.1rem;
+    }
+}
