@@ -1,14 +1,16 @@
 /* ==================================================
-   🎨 BRAND COLOUR PALETTE — EDIT THESE ONLY!
+   🎨 MULTIPLIED INTELLIGENCE — BRAND PALETTE
+   Matched exactly to logo: White dominant, Blue + Red core, Gold accents, Purple as blend
    ================================================== */
 :root {
-    --brand-primary: #165DFF;        /* Main brand blue */
-    --brand-secondary: #FF7D00;     /* Bright orange accent */
-    --brand-tertiary: #7B2CF4;       /* Purple accent */
-    --brand-dark: #111827;           /* Dark text / headings */
-    --brand-light: #FFFFFF;          /* White background */
-    --brand-grey-light: #F3F4F6;     /* Light grey backgrounds */
-    --brand-grey-medium: #9CA3AF;    /* Secondary text */
+    --mi-white:        #FFFFFF;       /* Main background — dominant */
+    --mi-blue:         #1A237E;       /* Deep rich blue — main brand, bold but not harsh */
+    --mi-red:          #C62828;       /* Deep red — balance / yin-yang point */
+    --mi-gold:         #D4AF37;       /* Soft gold — accents, highlights, luxury */
+    --mi-purple:       #4A148C;       /* Soft purple — emerges where blue + red meet */
+    --mi-dark:         #121212;       /* Dark text — readable, soft */
+    --mi-grey-light:   #F5F5F5;       /* Subtle backgrounds, dividers */
+    --mi-grey-medium:  #757575;       /* Secondary text */
 }
 
 /* ==================================================
@@ -22,8 +24,8 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    color: var(--brand-dark);
-    background-color: var(--brand-light);
+    color: var(--mi-dark);
+    background-color: var(--mi-white); /* ✅ White is dominant */
     line-height: 1.7;
     font-size: 16px;
 }
@@ -41,20 +43,20 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 strong {
     font-weight: 600;
-    color: var(--brand-dark);
+    color: var(--mi-dark);
 }
 
 /* ==================================================
-   HEADER & NAV
+   HEADER & NAVIGATION
    ================================================== */
 .site-header {
-    background: var(--brand-light);
-    border-bottom: 3px solid var(--brand-primary);
+    background: var(--mi-white);
+    border-bottom: 3px solid var(--mi-blue); /* ✅ Main blue accent */
     padding: 1.2rem 0;
     position: sticky;
     top: 0;
@@ -72,12 +74,12 @@ strong {
 .logo h1 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--brand-primary);
+    color: var(--mi-blue); /* ✅ Logo in main blue */
 }
 
 .logo .symbol {
     font-weight: 400;
-    color: var(--brand-grey-medium);
+    color: var(--mi-red); /* ✅ Xi symbol in red — yin/yang balance */
 }
 
 .main-nav ul {
@@ -89,36 +91,36 @@ strong {
 .main-nav a {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--brand-dark);
+    color: var(--mi-dark);
     padding: 0.3rem 0;
     border-bottom: 3px solid transparent;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: var(--brand-primary);
-    border-bottom: 3px solid var(--brand-primary);
+    color: var(--mi-red); /* ✅ Hover = red */
+    border-bottom: 3px solid var(--mi-red);
 }
 
 /* ==================================================
-   HERO
+   HERO SECTION
    ================================================== */
 .hero {
-    background: var(--brand-light);
+    background: var(--mi-white);
     padding: 5rem 0 4rem;
     text-align: center;
-    border-bottom: 1px solid var(--brand-grey-light);
+    border-bottom: 1px solid var(--mi-grey-light);
 }
 
 .hero h2 {
     font-size: 2.4rem;
     margin-bottom: 0.8rem;
-    color: var(--brand-primary);
+    color: var(--mi-blue); /* ✅ Main heading blue */
 }
 
 .hero .tagline {
     font-size: 1.2rem;
-    color: var(--brand-secondary);
+    color: var(--mi-red); /* ✅ Tagline red — balance */
     font-style: italic;
     margin-bottom: 1.5rem;
     font-weight: 500;
@@ -128,7 +130,7 @@ strong {
     max-width: 750px;
     margin: 0.8rem auto;
     font-size: 1.05rem;
-    color: var(--brand-dark);
+    color: var(--mi-dark);
 }
 
 .hero-buttons {
@@ -153,22 +155,23 @@ strong {
 }
 
 .btn-primary {
-    background-color: var(--brand-primary);
-    color: var(--brand-light);
+    background-color: var(--mi-blue); /* ✅ Main button = blue */
+    color: var(--mi-white);
 }
 
 .btn-primary:hover {
-    background-color: #0F48C9;
+    background-color: var(--mi-purple); /* ✅ Hover = purple (blend) */
     transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background-color: var(--brand-secondary);
-    color: var(--brand-light);
+    background-color: var(--mi-red); /* ✅ Secondary = red */
+    color: var(--mi-white);
 }
 
 .btn-secondary:hover {
-    background-color: #E67000;
+    background-color: var(--mi-gold); /* ✅ Hover = gold accent */
+    color: var(--mi-dark);
     transform: translateY(-1px);
 }
 
@@ -177,7 +180,7 @@ strong {
    ================================================== */
 .content {
     padding: 3rem 0;
-    background-color: var(--brand-light);
+    background-color: var(--mi-white);
 }
 
 .content-block {
@@ -186,31 +189,32 @@ strong {
 
 .content-block h3 {
     font-size: 1.6rem;
-    color: var(--brand-primary);
+    color: var(--mi-blue); /* ✅ Headings blue */
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--brand-grey-light);
+    border-bottom: 2px solid var(--mi-grey-light);
     padding-bottom: 0.3rem;
 }
 
 .content-block p {
     margin-bottom: 1rem;
-    color: var(--brand-dark);
+    color: var(--mi-dark);
 }
 
 .content-block .promise {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--brand-tertiary);
+    color: var(--mi-purple); /* ✅ Core promise = purple (blend point) */
     text-align: center;
     padding: 1rem;
-    background: var(--brand-grey-light);
+    background: var(--mi-grey-light);
     border-radius: 6px;
+    border-left: 4px solid var(--mi-gold); /* ✅ Gold accent border */
 }
 
 .themes-list li {
     padding: 0.7rem 0;
-    border-bottom: 1px solid var(--brand-grey-light);
-    color: var(--brand-dark);
+    border-bottom: 1px solid var(--mi-grey-light);
+    color: var(--mi-dark);
 }
 
 .themes-list li:last-child {
@@ -218,17 +222,17 @@ strong {
 }
 
 .highlight {
-    background-color: var(--brand-grey-light);
+    background-color: var(--mi-grey-light);
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
-    border-left: 5px solid var(--brand-tertiary);
+    border-left: 5px solid var(--mi-red); /* ✅ Highlight border = red */
 }
 
 blockquote {
     font-size: 1.4rem;
     font-style: italic;
-    color: var(--brand-tertiary);
+    color: var(--mi-purple); /* ✅ Quotes = purple — where they meet */
     max-width: 700px;
     margin: 0 auto;
     font-weight: 500;
@@ -238,11 +242,12 @@ blockquote {
    FOOTER
    ================================================== */
 .site-footer {
-    background-color: var(--brand-primary);
-    color: var(--brand-light);
+    background-color: var(--mi-blue); /* ✅ Footer = main blue */
+    color: var(--mi-white);
     padding: 2rem 0;
     text-align: center;
     font-size: 0.9rem;
+    border-top: 3px solid var(--mi-red); /* ✅ Top border = red balance */
 }
 
 .site-footer p {
