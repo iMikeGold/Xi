@@ -14,7 +14,7 @@
 }
 
 /* ==================================================
-   BASE STYLES
+   BASE STYLES + NEW: FADED LOGO WATERMARK
    ================================================== */
 * {
     margin: 0;
@@ -28,6 +28,26 @@ body {
     background-color: var(--mi-white);
     line-height: 1.7;
     font-size: 16px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* --- ✅ NEW: FADED XI⁷ LOGO BEHIND ALL CONTENT --- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;                /* ← ADJUST: size of watermark */
+    height: 65%;               /* ← ADJUST: size of watermark */
+    background-image: url('/images/xi7shoe-logo-only-main.png'); /* ← YOUR FILE NAME */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.04;             /* ← ADJUST: 0.02 = faint, 0.07 = clearer */
+    z-index: -1;               /* stays behind everything */
+    pointer-events: none;       /* doesn't block clicks */
 }
 
 .container {
@@ -52,7 +72,7 @@ strong {
 }
 
 /* ==================================================
-   HEADER & NAVIGATION — ✅ TABS BACK ON THE RIGHT
+   HEADER & NAVIGATION — ✅ YOUR ORIGINAL STYLING + SCROLL FIX
    ================================================== */
 .site-header {
     background: var(--mi-white);
@@ -82,17 +102,25 @@ strong {
     color: var(--mi-red);
 }
 
+/* --- ✅ UPDATED: ENABLE HORIZONTAL SCROLL + SMOOTH BEHAVIOUR --- */
+.main-nav {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 0.3rem;
+}
+
 .main-nav ul {
     display: flex;
     gap: 1.5rem;
-    /* ✅ MOBILE: IN-LINE, NOT STACKED */
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 0.3rem;
-    justify-content: flex-end; /* ✅ Keep tabs aligned right even if wrapped */
+    flex-wrap: nowrap;          /* ✅ IN-LINE, NOT STACKED */
+    justify-content: flex-end;  /* ✅ Keep tabs aligned right */
+    min-width: max-content;
 }
 
-/* ✅ NAV ITEM STYLING */
+/* ✅ NAV ITEM STYLING — YOUR ORIGINAL */
 .main-nav a {
     font-size: 0.95rem;
     font-weight: 600;
@@ -109,7 +137,7 @@ strong {
 }
 
 /* ==================================================
-   HERO SECTION
+   HERO SECTION — YOUR ORIGINAL
    ================================================== */
 .hero {
     background: var(--mi-white);
@@ -148,7 +176,7 @@ strong {
 }
 
 /* ==================================================
-   BUTTONS — ✅ CORRECT: Blue → Gold hover | Red → Purple hover
+   BUTTONS — ✅ YOUR ORIGINAL: Blue → Gold | Red → Purple
    ================================================== */
 .btn {
     padding: 0.8rem 2rem;
@@ -184,7 +212,7 @@ strong {
 }
 
 /* ==================================================
-   CONTENT BLOCKS
+   CONTENT BLOCKS — YOUR ORIGINAL + SUBTLE DEPTH
    ================================================== */
 .content {
     padding: 3rem 0;
@@ -193,6 +221,9 @@ strong {
 
 .content-block {
     margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.7); /* ✅ slight transparency to let watermark show */
+    padding: 0.5rem;
+    border-radius: 4px;
 }
 
 .content-block h3 {
@@ -247,7 +278,7 @@ blockquote {
 }
 
 /* ==================================================
-   FOOTER
+   FOOTER — YOUR ORIGINAL
    ================================================== */
 .site-footer {
     background-color: var(--mi-blue);
@@ -263,7 +294,7 @@ blockquote {
 }
 
 /* ==================================================
-   RESPONSIVE — ✅ MOBILE NAV IN-LINE + STILL RIGHT ALIGNED
+   RESPONSIVE — ✅ YOUR ORIGINAL + SCROLL FIX
    ================================================== */
 @media (max-width: 768px) {
     .site-header .container {
